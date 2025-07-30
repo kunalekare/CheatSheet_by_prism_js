@@ -1,0 +1,134 @@
+ /* Base styles from user, with additions for a complete look */
+ 
+ /* important for copy on keyboard
+ <!-- Toolbar plugin CSS (required for the copy button) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet" />
+
+<!-- Prism JS (Core) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<!-- Toolbar and Copy to Clipboard plugins JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script> */
+ 
+ 
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #272822;
+            color: white;
+            height: 72px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .content {
+            font-family: 'Potta One', cursive;
+        }
+
+        .logo {
+            padding: 0 13px;
+        }
+
+        .logo img {
+            width: 32px;
+            filter: invert(1); /* Makes the icon white */
+        }
+
+        .container {
+            width: 90vw;
+            max-width: 1000px;
+            padding: 32px 0;
+            margin: auto;
+        }
+
+        .container ol {
+            list-style: none;
+            counter-reset: item;
+        }
+
+        .container li {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            counter-increment: item;
+            display: flex;
+            flex-direction: column;
+            position: relative; /* Needed for positioning the copy button */
+        }
+        
+        .container li::before {
+            content: counter(item);
+            background: #272822;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            flex-shrink: 0;
+        }
+
+        .container li b {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        
+        .container li p {
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        /* Prism.js code block styling */
+        pre[class*="language-"] {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            position: relative;
+        }
+        
+        /* Copy Button Styling */
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            background-color: #3a3f44;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s, background-color 0.2s;
+        }
+        
+        .copy-btn:hover {
+            opacity: 1;
+        }
+        
+        .copy-btn.copied {
+            background-color: #28a745; /* Green color for success */
+        }

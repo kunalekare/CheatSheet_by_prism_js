@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Cheat Sheet</title>
+    
+    <!-- Prism.js CSS (using a theme that matches the dark background) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <nav>
+        <span class="logo"><img src="copy.svg" alt="Logo"></span>
+        <div class="content center">
+            This HTML Cheat Sheet is for You!
+        </div>
+    </nav>
+
+    <div class="container">
+        <ol>
+            <li>
+                <b>HTML Boilerplate</b>
+                <p>The basic structure required for every HTML page.</p>
+                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </li>
+            <li>
+                <b>Headings & Paragraphs</b>
+                <p>Used to structure content hierarchically and for text blocks.</p>
+                <pre><code class="language-html">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <b>Text Formatting</b>
+                <p>Tags for adding semantic meaning and style to text.</p>
+                <pre><code class="language-html">&lt;strong&gt;Bold text&lt;/strong&gt;
+&lt;em&gt;Italicized text&lt;/em&gt;
+&lt;u&gt;Underlined text&lt;/u&gt;
+&lt;s&gt;Strikethrough text&lt;/s&gt;
+&lt;br&gt; &lt;!-- Line break --&gt;
+&lt;hr&gt; &lt;!-- Horizontal rule --&gt;</code></pre>
+            </li>
+            <li>
+                <b>Links (Anchor Tags)</b>
+                <p>Create hyperlinks to other pages or resources.</p>
+                <pre><code class="language-html">&lt;!-- External link --&gt;
+&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;
+
+&lt;!-- Link to another page on your site --&gt;
+&lt;a href="/about.html"&gt;About Us&lt;/a&gt;
+
+&lt;!-- Link that opens in a new tab --&gt;
+&lt;a href="#" target="_blank"&gt;New Tab&lt;/a&gt;</code></pre>
+            </li>
+            <li>
+                <b>Images</b>
+                <p>Embed images in your webpage. The `alt` attribute is vital for accessibility.</p>
+                <pre><code class="language-html">&lt;img src="image.jpg" alt="A descriptive text for the image" width="500" height="300"&gt;</code></pre>
+            </li>
+            <li>
+                <b>Lists</b>
+                <p>Organize content into unordered (bulleted), ordered (numbered), and description lists.</p>
+                <pre><code class="language-html">&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List --&gt;
+&lt;ol&gt;
+    &lt;li&gt;First Item&lt;/li&gt;
+    &lt;li&gt;Second Item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </li>
+            <li>
+                <b>Tables</b>
+                <p>For displaying data in rows and columns.</p>
+                <pre><code class="language-html">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data cell 1&lt;/td&gt;
+            &lt;td&gt;Data cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            </li>
+            <li>
+                <b>Forms</b>
+                <p>Collect user input with various types of controls.</p>
+                <pre><code class="language-html">&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="username"&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="user_email"&gt;
+    
+    &lt;textarea name="message"&gt;&lt;/textarea&gt;
+    
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </li>
+            <li>
+                <b>Semantic HTML</b>
+                <p>Elements that provide meaning and structure to the content.</p>
+                <pre><code class="language-html">&lt;header&gt;Page Header&lt;/header&gt;
+&lt;nav&gt;Navigation Links&lt;/nav&gt;
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;section&gt;A section of the article.&lt;/section&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+&lt;aside&gt;Sidebar content&lt;/aside&gt;
+&lt;footer&gt;Page Footer&lt;/footer&gt;</code></pre>
+            </li>
+            <li>
+                <b>Generic Containers & Comments</b>
+                <p>Used for grouping elements for styling (CSS) or functionality (JavaScript).</p>
+                <pre><code class="language-html">&lt;!-- This is a comment --&gt;
+
+&lt;!-- Block-level container --&gt;
+&lt;div class="container"&gt;
+    Content inside a div.
+&lt;/div&gt;
+
+&lt;!-- Inline container --&gt;
+&lt;p&gt;This is a &lt;span style="color:red;"&gt;span&lt;/span&gt; inside a paragraph.&lt;/p&gt;</code></pre>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Prism.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    
+    <!-- Custom script for copy functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Find all <pre> blocks
+            const preBlocks = document.querySelectorAll('pre');
+
+            preBlocks.forEach(pre => {
+                // Create a button
+                const copyButton = document.createElement('button');
+                copyButton.className = 'copy-btn';
+                copyButton.textContent = 'Copy';
+
+                // Append the button to the <pre> block
+                pre.appendChild(copyButton);
+
+                // Add click event listener to the button
+                copyButton.addEventListener('click', () => {
+                    const code = pre.querySelector('code');
+                    const textToCopy = code.innerText;
+
+                    // Use a temporary textarea to perform the copy command
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    
+                    try {
+                        document.execCommand('copy');
+                        copyButton.textContent = 'Copied!';
+                        copyButton.classList.add('copied');
+                    } catch (err) {
+                        console.error('Failed to copy text: ', err);
+                        copyButton.textContent = 'Error';
+                    }
+
+                    document.body.removeChild(textArea);
+
+                    // Reset button text after 2 seconds
+                    setTimeout(() => {
+                        copyButton.textContent = 'Copy';
+                        copyButton.classList.remove('copied');
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
